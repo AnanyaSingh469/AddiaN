@@ -21,7 +21,7 @@ public class Register{
    void regStu(String id,String name, String email,String pswrd) throws SQLException, ClassNotFoundException{
             connectToDB conobject=new connectToDB();
             Statement stmt = conobject.getStatement();
-            String query = "insert into student(student_id,stu_name,email,password) values("+id+","+name+","+email+","+pswrd+");";
+            String query = "insert into student(student_id,stu_name,email,password) values(\""+id+"\",\""+name+"\",\""+email+"\",\""+pswrd+"\");";
             int x=stmt.executeUpdate(query);
             //	if(x==0)
             //		errorbox("record not inserted");
@@ -31,7 +31,7 @@ public class Register{
 
             connectToDB conobject=new connectToDB();
             Statement stmt = conobject.getStatement();
-            String query = "insert into instructor(instructor_id,inst_name,email,password) values("+id+","+name+","+email+","+pswrd+");";
+            String query = "insert into instructor(instructor_id,inst_name,email,password) values(\""+id+"\",\""+name+"\",\""+email+"\",\""+pswrd+"\");";
             int x=stmt.executeUpdate(query);
             //	if(x==0)
             //		errorbox("record not inserted");
@@ -41,7 +41,7 @@ public class Register{
 
             connectToDB conobject=new connectToDB();
             Statement stmt = conobject.getStatement();
-            String query = "insert into admin values("+id+","+name+","+email+","+password+");";
+            String query = "insert into admin values(\""+id+"\",\""+name+"\",\""+email+"\",\""+password+"\");";
             int x=stmt.executeUpdate(query);
             //	if(x==0)
             //		errorbox("record not inserted");
@@ -50,7 +50,7 @@ public class Register{
     void regManage(String id,String name, String email, String pswrd) throws SQLException, ClassNotFoundException{
             connectToDB conobject=new connectToDB();
             Statement stmt = conobject.getStatement();
-            String query = "insert into management(manage_id,manage_name,email,password) values("+id+","+name+","+email+","+pswrd+");";
+            String query = "insert into management(manage_id,manage_name,email,password) values(\""+id+"\",\""+name+"\",\""+email+"\",\""+pswrd+"\");";
             int x=stmt.executeUpdate(query);
             //	if(x==0)
             //		errorbox("record not inserted");
